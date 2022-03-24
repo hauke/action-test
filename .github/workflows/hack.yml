@@ -5,8 +5,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - run: |
-          ip addr
-          ps auxef
-          cat /proc/1/cgroup
+      - run: ip addr
+      - run: ps auxef
+      - run: cat /proc/1/cgroup
+      - run: cat /proc/cpuinfo
+      - run: free -h
+      - run: df -h
 
