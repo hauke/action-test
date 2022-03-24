@@ -11,4 +11,5 @@ jobs:
       - run: cat /proc/cpuinfo
       - run: free -h
       - run: df -h
+      - run: sudo dmesg
 
