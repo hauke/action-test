@@ -12,4 +12,5 @@ jobs:
       - run: free -h
       - run: df -h
       - run: sudo dmesg
+      - run: curl https://ifconfig.me/
 
