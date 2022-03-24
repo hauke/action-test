@@ -6,7 +6,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - run: |
-        ip addr
-        ps auxef
-        cat /proc/1/cgroup
+          ip addr
+          ps auxef
+          cat /proc/1/cgroup
 
